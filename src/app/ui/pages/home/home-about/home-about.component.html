@@ -1,0 +1,122 @@
+<div class="tb-position--relative main" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+    <div class="tb-container tb-position--relative container">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+
+            <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" fxLayout="row"
+                fxLayoutAlign="start end">
+                <h4 class="title current-typo--h4 tb-flex--shrink-0">About Me.</h4>
+                <div class="tb-width--12"></div>
+                <div fxFlex="60" class="line tb-color-bg--black"></div>
+                <div fxFlex></div>
+            </div>
+
+            <div ngClass.gt-xs="tb-height--20" ngClass.xs="tb-height--12"></div>
+
+            <div fxLayout="row" fxLayout.xs="column">
+                <!-- Left Column -->
+                <div [fxFlexOrder]="1" [fxFlexOrder.xs]="2" fxFlex fxFlex.xs="none" fxFlex.sm="70" fxLayout="column">
+                    <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+                    <p [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}"
+                        class="current-typo--body1-medium tb-color--black-54">
+                        I’m a <span class="tb-color--black">Full Stack Software Developer</span> with hands-on
+                        experience building scalable, responsive, and cross-platform applications using
+                        <span class="tb-color--black">Angular, Flutter, HTML, CSS, JavaScript, .NET Core, Java,</span>
+                        and <span class="tb-color--black">MySQL</span>. I excel at transforming complex requirements
+                        into
+                        clean, maintainable architectures that deliver high performance and seamless user experiences.
+                    </p>
+
+                    <div ngClass.gt-sm="tb-height--12" ngClass.sm="tb-height--8" ngClass.xs="tb-height--6"></div>
+
+                    <p [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}"
+                        class="current-typo--body1-medium tb-color--black-54">
+                        I’m driven by clean architecture, performance, and user-focused design. I approach every project
+                        with a problem-solving mindset, balancing technical precision with practical innovation to build
+                        software that lasts.
+                    </p>
+
+                    <div ngClass.gt-sm="tb-height--56" ngClass.sm="tb-height--46" ngClass.xs="tb-height--32"></div>
+
+                    <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:300}}" fxLayout="row">
+                        <div fxFlex fxLayout="column" fxLayoutGap="12" fxLayoutAlign="start start">
+                            <h2 class="title current-typo--h3-light">02+</h2>
+                            <h4 class="title current-typo--h6">Years of Experience</h4>
+                        </div>
+
+                        <div fxFlex fxLayout="column" fxLayoutGap="12" fxLayoutAlign="start start">
+                            <h2 class="title current-typo--h3-light">5+</h2>
+                            <h4 class="title current-typo--h6">Projects Completed</h4>
+                        </div>
+                    </div>
+
+
+
+                    <!--         <div [@transitionText]="{ value: _mTriggerAnim, params: { animDelay: 400 } }" fxLayout="row wrap"
+                        fxLayoutAlign="start start" fxLayoutGap="12px" class="skills-container">
+                        <div class="skill tb-color-bg--black-6">
+                            <h5 class="current-typo--h5">Development</h5>
+                        </div>
+
+                        <div class="skill" style="background-color: #dd0031;">
+                            <h5 class="current-typo--h5 tb-color--white">Angular</h5>
+                        </div>
+
+                        <div class="skill" style="background-color: #512bd4;">
+                            <h5 class="current-typo--h5 tb-color--white">ASP.Net Core</h5>
+                        </div>
+
+                        <div class="skill" style="background-color: #02569b;">
+                            <h5 class="current-typo--h5 tb-color--white">Flutter</h5>
+                        </div>
+
+                        <div class="skill" style="background-color: #f7df1e; color: #000;">
+                            <h5 class="current-typo--h5">JavaScript</h5>
+                        </div>
+
+                        <div class="skill" style="background-color: #4479a1;">
+                            <h5 class="current-typo--h5 tb-color--white">MySQL</h5>
+                        </div>
+
+                        <div class="skill" style="background-color: #61dafb; color: #000;">
+                            <h5 class="current-typo--h5">RESTful APIs</h5>
+                        </div>
+
+                        <div class="skill" style="background-color: #6c757d;">
+                            <h5 class="current-typo--h5 tb-color--white">Responsive Design</h5>
+                        </div>
+                    </div> -->
+
+
+                    <!-- ✅ Properly closed the div before the button area -->
+                    <div ngClass.gt-sm="tb-height--56" ngClass.sm="tb-height--46" ngClass.xs="tb-height--32"></div>
+
+                    <div [@transitionText]="{value:_mTriggerAnim, params:{animDelay:600}}" fxLayout="row"
+                        fxLayoutAlign="start center" fxLayoutGap="32">
+                        <a class="btn-area-cv" href="assets/Resume/Pratik_Nemade_Resume.pdf" download>
+                            <button mat-raised-button color="primary">
+                                <span class="current-typo--button-medium">Download CV</span>
+                            </button>
+                        </a>
+
+                        <a class="btn-area-cv" href="https://www.linkedin.com/in/pratik-nemade-9p/" target="_blank"
+                            rel="noopener noreferrer">
+                            <button mat-raised-button color="primary" style="background-color: #0077b5;">
+                                <span class="current-typo--button-medium">LinkedIn</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column (Image) -->
+                <div fxFlex.xs="none" fxFlex [fxFlexOrder.xs]="1" [fxFlexOrder]="2" class="image-container"
+                    fxLayout="column" fxLayoutAlign="center stretch">
+                    <div [@transitionImageScale]="{value:_mTriggerAnim, params:{animDelay:800}}"
+                        class="tb-text--align-center image-area" #imageAreaView>
+                        <img class="image tb-position--relative" src="assets/img/avatar/pic_avatarr.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

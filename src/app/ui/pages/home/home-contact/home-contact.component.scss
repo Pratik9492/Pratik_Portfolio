@@ -1,0 +1,131 @@
+.main {
+  .container {
+    box-sizing: border-box;
+    padding: 0px 20px;
+  }
+
+  .form-area {
+    padding: 20px 48px;
+  }
+
+  .connect-detail {
+    width: 70%;
+  }
+
+  .underline {
+    text-decoration-line: underline;
+  }
+
+  &.xs {
+    .form-area {
+      padding: 20px 28px;
+    }
+  }
+
+  .contact-container {
+    min-height: 60vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-content {
+    max-width: 700px;
+    padding: 2rem;
+  }
+
+  .contact-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ✅ Say Hello Button (transparent → black on hover) */
+  .say-hello-btn {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border: 2px solid black;
+    border-radius: 6px;
+    background: transparent;
+    color: black;
+    transition: all 0.3s ease;
+    text-transform: none;
+    cursor: pointer;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+
+  /* === Vertical LinkedIn & Email (side links) === */
+  .side-link {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    color: black;
+
+    a {
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      font-family: inherit;
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0A66C2; /* ✅ LinkedIn hover blue for email too */
+    }
+
+    .line {
+      width: 1px;
+      height: 80px;
+      background-color: black;
+    }
+
+    .linkedin-icon {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(27%) sepia(93%) saturate(2787%) hue-rotate(197deg)
+          brightness(97%) contrast(101%);
+        /* This gives #0A66C2 tint effect */
+      }
+    }
+  }
+
+  .left-side {
+    left: 32px;
+  }
+
+  .right-side {
+    right: 32px;
+
+    .email-link {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .side-link {
+      display: none;
+    }
+  }
+  
+
+}

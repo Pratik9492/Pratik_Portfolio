@@ -1,0 +1,205 @@
+.main {
+  .container {
+    box-sizing: border-box;
+    padding: 0px 20px;
+  }
+
+  .line {
+    height: 2px;
+  }
+
+  .section-title {
+    line-height: 0.7;
+  }
+
+  .section-detail {
+    width: 70%;
+  }
+
+  .icon-area-full {
+    width: 100%;
+    height: 364px;
+
+    .image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .logos-area {
+    height: 500px;
+
+    .image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .logo-area-row {
+    height: 60%;
+  }
+
+  .logo-area-small {
+    height: 35%;
+  }
+
+  .logo-area-large {
+    height: 100%;
+  }
+
+  &.sm {
+    .logos-area {
+      height: 340px;
+    }
+
+    .icon-area-full {
+      height: 264px;
+    }
+  }
+
+  &.xs {
+    .logos-area {
+      height: 150vh;
+    }
+
+    .logo-area-row {
+      height: unset;
+      width: 60%;
+    }
+
+    .logo-area-small {
+      height: unset;
+      width: 35%;
+    }
+
+    .logo-area-large {
+      width: 100%;
+      height: unset;
+    }
+  }
+
+  /* =====================================================
+     Project Section Styles
+  ===================================================== */
+  .client-app-list {
+    width: 100%;
+    max-width: 1918px;
+    margin: 0 auto;
+  }
+
+  .client-app-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      min-height: auto;
+    }
+  }
+
+  .client-app-image {
+    flex: 0 0 50%;
+    position: relative;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    .app-image {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .client-app-info {
+    flex: 0 0 50%;
+    padding: 60px;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      padding: 24px;
+    }
+
+    .app-name {
+  font-size: 1.5rem; 
+  font-weight: 500;  
+  margin-bottom: 12px;
+  color: #222;       
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;              
+    height: 2px;              
+    background-color: #000;   
+    margin-top: 8px;
+    border-radius: 1px;
+}
+    }
+
+    .app-description {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .fade-image {
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    /* ==============================================
+       ✅ Theme-Colored Tech Stack Tags
+    ============================================== */
+    .tech-stack {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .tech-item {
+        background-color: #000; /* your theme primary */
+        color: #fff;
+        border-radius: 50px;
+        padding: 8px 16px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.2;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          background-color: #333;
+          transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

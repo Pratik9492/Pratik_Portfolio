@@ -1,0 +1,152 @@
+.experience-section {
+  color: #555555;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 80px 0;
+  transition: all 0.3s ease;
+
+  .container {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .line {
+    height: 2px;
+  }
+
+  .title {
+    line-height: 0.7;
+    color: black;
+  }
+
+  /* --- Header Alignment --- */
+  .section-title {
+    color: #555555;
+    margin-bottom: 60px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.4;
+    
+  }
+ .section-title + .experience-container {
+    margin-top: 40px;
+  }
+  /* --- Layout --- */
+  .experience-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .company-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 2px solid rgba(0, 0, 0, 0.08);
+    padding-left: 16px;
+    min-width: 240px;
+
+    .company-item {
+      color: #555555;
+      padding: 10px 14px;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border-radius: 4px;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: #000000;
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      &.active {
+        color: #000000;
+        background: lightgrey;
+        border-left-color: #305CDE;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .experience-details {
+    flex: 1;
+    padding-left: 16px;
+
+    .role-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 6px;
+    }
+
+    .company-name {
+      color: #305CDE;
+    }
+
+    .duration {
+      color: #555555;
+      margin-bottom: 20px;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .experience-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        line-height: 1.8;
+        color: #555555;
+        display: flex;
+        align-items: flex-start;
+
+        .bullet {
+          color: #305CDE;
+          margin-right: 10px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  /* --- Mobile adjustments to match main --- */
+  &.xs {
+    .experience-container {
+      flex-direction: column;
+       
+    }
+
+    .company-list {
+      flex-direction: column;
+      overflow-x: auto;
+      border-left: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      gap: 12px;
+
+      .company-item {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+        flex-shrink: 0;
+
+        &.active {
+          border-bottom: 3px solid #305CDE;
+          background: none;
+          color: #000000;
+        }
+      }
+    }
+
+    .experience-details {
+      padding-left: 0;
+    }
+  }
+}

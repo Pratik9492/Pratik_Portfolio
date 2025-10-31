@@ -1,0 +1,59 @@
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+  <div fxLayout="column" fxLayoutAlign="start stretch">
+
+    <!-- Header -->
+    <div [@transitionText]="{ value: _mTriggerAnim, params: { animDelay: 100 } }"
+         fxLayout="row"
+         fxLayoutAlign="start end">
+      <h4 class="section-title current-typo--h4 tb-flex--shrink-0">
+        Projects that I was a part of
+      </h4>
+      <div class="tb-width--12"></div>
+      <div fxFlex="60" class="line tb-color-bg--black"></div>
+      <div fxFlex></div>
+    </div>
+
+    <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+
+    <!-- Description -->
+    <p [@transitionText]="{ value: _mTriggerAnim, params: { animDelay: 500 } }"
+       class="section-detail tb-color--black-54"
+       ngClass.gt-sm="current-typo--body1"
+       ngClass.sm="current-typo--body1"
+       ngClass.xs="current-typo--body1">
+    </p>
+
+    <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
+
+    <!-- Client Apps -->
+    <div fxLayout="column" fxLayoutGap="40px" class="client-app-list">
+      <ng-container *ngFor="let app of _mClientApps">
+        <div fxLayout="row"
+             fxLayout.xs="column"
+             fxLayoutAlign="start stretch"
+             class="client-app-card"
+             [@transitionText]="{ value: _mTriggerAnim, params: { animDelay: 200 } }">
+
+          <!-- Left: Image -->
+          <div class="client-app-image">
+            <img [src]="currentImageMap[app.id]" [alt]="app.name" class="app-image fade-image" />
+          </div>
+
+          <!-- Right: Info -->
+          <div class="client-app-info">
+            <h2 class="app-name">{{ app.name }}</h2>
+            <p class="app-description">{{ app.description }}</p>
+
+            <!-- ✅ Tech Stack (only once) -->
+            <div class="tech-stack" *ngIf="app.techStack && app.techStack.length">
+              <span *ngFor="let tech of app.techStack" class="tech-item">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

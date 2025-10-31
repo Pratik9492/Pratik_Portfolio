@@ -1,0 +1,35 @@
+.main {
+  margin: 8px 0;
+  position: relative;
+
+  .background {
+    position: absolute;
+    bottom: -8px;
+    right: -6px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.85);
+     
+    transition: background 0.3s ease;
+  }
+
+  .content {
+    z-index: 1;
+    padding: 32px;
+     
+    box-sizing: border-box;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+  }
+
+  &:hover .content {
+    transform: translateY(-4px);
+    filter: brightness(1.1);
+  }
+
+  &.sm .content,
+  &.xs .content {
+    padding: 24px;
+  }
+}

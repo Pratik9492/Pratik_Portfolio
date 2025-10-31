@@ -1,0 +1,61 @@
+<div class="tb-position--relative main experience-section" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+  <div class="tb-container tb-position--relative container">
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+
+      <!-- Section Header -->
+      <div
+        [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}"
+        fxLayout="row"
+        fxLayoutAlign="start end"
+      >
+        <h4 class="title current-typo--h4 tb-flex--shrink-0">Experience.</h4>
+        <div class="tb-width--12"></div>
+        <div fxFlex="60" class="line tb-color-bg--black"></div>
+        <div fxFlex></div>
+      </div>
+
+      <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--16"></div>
+
+      <!-- Experience Content -->
+      <div
+        [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}"
+        fxLayout="row"
+        fxLayout.lt-md="column"
+        fxLayoutGap="32px"
+        class="experience-container"
+      >
+
+        <!-- Left: Company list -->
+        <div class="company-list tb-color--black-54" fxFlex="25">
+          <div
+            *ngFor="let exp of experiences"
+            class="company-item current-typo--body1-medium"
+            [ngClass]="{ active: exp === selectedExperience }"
+            (click)="selectExperience(exp)"
+          >
+            {{ exp.company }}
+          </div>
+        </div>
+
+        <!-- Right: Experience Details -->
+        <div class="experience-details tb-color--black-54" fxFlex>
+          <h3 class="role-title current-typo--h5">
+            {{ selectedExperience.role }} |
+            <span class="company-name tb-color--black">{{ selectedExperience.company }}</span>
+          </h3>
+
+          <p class="duration current-typo--body2 tb-color--black-54">
+            {{ selectedExperience.duration }}
+          </p>
+
+          <ul class="experience-points">
+            <li *ngFor="let point of selectedExperience.details" class="current-typo--body1-medium">
+              <span class="bullet">▸</span> {{ point }}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

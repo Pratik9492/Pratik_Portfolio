@@ -1,0 +1,13 @@
+# Angular build and cache
+dist/
+.angular/
+node_modules/
+
+# IDE & OS junk
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Environment & logs
+.env
+*.log

@@ -1,0 +1,65 @@
+.main {
+  .container {
+    box-sizing: border-box;
+    padding: 0px 20px;
+  }
+
+  .line {
+    height: 2px;
+  }
+
+  .tools-title {
+    line-height: 0.7;
+  }
+
+  .tool {
+    padding: 10px 16px;
+    margin-bottom: 16px;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .tool-image-area {
+    height: 28px;
+    width: 28px;
+  }
+
+  .unlink {
+    text-decoration: none;
+  }
+
+  &.xs {
+    .tool {
+      padding: 6px 10px;
+      margin-bottom: 6px;
+    }
+
+    .tool-image-area {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+/* 🎨 Themed accent colors inspired by VS / VSCode */
+.expertise-web {
+  background-color: #dd0031; // Angular Red
+  color: #fff;
+}
+.expertise-cross {
+  background-color: #42a5f5; // Flutter Blue
+  color: #fff;
+}
+.expertise-backend {
+  background-color: #512bd4; // .NET Purple
+  color: #fff;
+}
+.expertise-tools {
+  background-color: #007acc; // VS Code Blue
+  color: #fff;
+}

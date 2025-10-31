@@ -1,0 +1,55 @@
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+
+    <!-- Left LinkedIn Icon -->
+    <div class="side-link left-side">
+        <a href="https://www.linkedin.com/in/pratik-nemade-9p/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/tools/linkedin.svg" alt="LinkedIn" class="linkedin-icon" />
+        </a>
+        <div class="line"></div>
+    </div>
+
+    <!-- Right Email Vertical -->
+    <div class="side-link right-side">
+        <a href="mailto:prtiknemade@gmail.com" class="email-link">prtiknemade@gmail.com</a>
+        <div class="line"></div>
+    </div>
+
+    <!-- Your existing untouched layout -->
+    <div class="tb-container tb-position--relative container">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+
+            <div ngClass.gt-xs="tb-height--64" ngClass.xs="tb-height--20"></div>
+
+            <!-- Title -->
+            <h2 [@transitionText]="{value:_mTriggerAnim, params:{animDelay:100}}" ngClass.gt-sm="current-typo--h3-light"
+                ngClass.sm="current-typo--h3-light" ngClass.xs="current-typo--h4" class="tb-color--black">
+                Get in touch!
+            </h2>
+
+            <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
+
+            <!-- Message Section -->
+            <div class="form-area tb-color-bg--black-2 tb-border--r6" fxLayout="column" fxLayoutAlign="center center"
+                [@transitionText]="{value:_mTriggerAnim, params:{animDelay:200}}">
+                <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--20"></div>
+                <p
+                    class="tb-text-align--center tb-color--black current-typo--body1 tb-padding--h-24 contact-description semi-bold-text">
+                    Let’s build something exceptional together.<br /><br />
+                    I craft clean, scalable, and purposeful digital experiences and I’m always open to new challenges or
+                    collaborations.<br /><br />
+                    Drop a message, and let’s turn your idea into something real.
+                </p>
+                <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--20"></div>
+
+                <!-- Say Hello Button -->
+                <button mat-button class="say-hello-btn current-typo--button" (click)="openMail()">
+                    👋 Say Hello
+                </button>
+
+                <div ngClass.gt-xs="tb-height--32" ngClass.xs="tb-height--20"></div>
+            </div>
+
+            <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+        </div>
+    </div>
+</div>

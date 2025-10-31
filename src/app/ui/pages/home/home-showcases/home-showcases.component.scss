@@ -1,0 +1,253 @@
+.main {
+    // overflow-x: hidden;
+    .container {
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    .line {
+        height: 2px;
+    }
+
+    .section-title {
+        line-height: 0.7;
+    }
+
+    .section-detail{
+        width: 70%;
+    }
+
+    .icon-area-full{
+        width: 100%;
+        height: 364px;
+        .image{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .logos-area{
+        height: 500px;
+
+        .image{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .logo-area-row{
+        height: 60%;      
+    }
+
+    .logo-area-small{
+        height: 35%;
+    }
+
+    .logo-area-large{
+        height: 100%;
+    }
+
+    &.sm{
+       
+        .logos-area{
+            height: 340px;
+        }
+
+        .icon-area-full{
+            height: 264px;
+        }
+        // .logos-area{
+        //     height: 400px;
+        // }
+    
+        // .logo-area-row{
+        //     height: 264px;      
+        // }
+    
+        // .logo-area-small{
+        //     height: 100px;
+        // }
+    
+        // .logo-area-large{
+        //     height: 300px;
+        // }
+    }
+
+    &.xs{
+        .logos-area{
+            height: 150vh;
+        }
+
+        .logo-area-row{
+            height: unset;
+            width: 60%;      
+        }
+    
+        .logo-area-small{
+            height: unset;
+            width: 35%;
+        }
+    
+        .logo-area-large{
+            width: 100%;
+            height: unset;
+        }
+    }
+
+}
+.main {
+    .container {
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    .line {
+        height: 2px;
+    }
+
+    .title {
+        line-height: 0.7;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .image-area {
+        position: relative;
+        height: 100%;
+        min-width: 200px;
+        display: flex;
+        padding: 20px 56px;
+        justify-content: center;
+        align-items: center;
+
+        .image {
+            z-index: 1;
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 350px;
+            min-height: 100px;
+        }
+    }
+
+    /* --- ✅ Skills Section --- */
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 16px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .skill {
+        border-radius: 50rem;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-width: 120px;
+        white-space: nowrap;
+        transition: all 0.2s ease-in-out;
+
+        h5 {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    /* --- ✅ Buttons --- */
+    .btn-area-cv {
+        position: relative;
+
+        > * {
+            z-index: 2;
+        }
+
+        &::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 4px;
+            left: 4px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            content: "";
+        }
+    }
+
+    .unlink {
+        text-decoration: none;
+    }
+
+    .btn-area-hire {
+        padding-top: 6px;
+
+        .btn-hire {
+            padding: 10px 28px;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+    }
+
+    /* --- ✅ Mobile Adjustments --- */
+    &.xs {
+        .image-container {
+            margin: 20px;
+        }
+
+        .image-area {
+            width: 100%;
+            padding: 0;
+
+            .image {
+                width: 100%;
+            }
+        }
+    }
+
+    /* --- ✅ Paragraph Styling (Justified Text) --- */
+    p.current-typo--body1-medium.tb-color--black-54 {
+        text-align: justify !important;
+        text-justify: inter-word !important;
+        line-height: 1.6 !important;
+        margin: 0 auto !important;
+        max-width: 800px !important;
+        padding: 0 20px !important;
+        word-break: break-word;
+    }
+
+    @media (max-width: 768px) {
+        p.current-typo--body1-medium.tb-color--black-54 {
+            text-align: justify !important;
+            text-justify: inter-word !important;
+            line-height: 1.8 !important;
+            padding: 0 16px !important;
+        }
+
+        .skills-container {
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 8px 16px;
+            min-width: 100px;
+        }
+    }
+}

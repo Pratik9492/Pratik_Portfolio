@@ -1,0 +1,63 @@
+<div class="tb-position--relative main current" ngClass.xs="xs" ngClass.sm="sm" #animRefView>
+  <div fxLayout="column" fxLayoutAlign="start stretch">
+    <!-- Header -->
+    <div
+      [@transitionText]="{ value: _mTriggerAnim, params: { animDelay: 100 } }"
+      fxLayout="row"
+      fxLayoutAlign="start end"
+    >
+      <h4 class="section-title current-typo--h4 tb-flex--shrink-0">
+        Personal Projects
+      </h4>
+      <div class="tb-width--12"></div>
+      <div fxFlex="60" class="line tb-color-bg--black"></div>
+      <div fxFlex></div>
+    </div>
+
+    <div ngClass.gt-xs="tb-height--36" ngClass.xs="tb-height--20"></div>
+
+   
+
+    <div ngClass.gt-xs="tb-height--40" ngClass.xs="tb-height--20"></div>
+
+    <!-- Project Grid -->
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxLayoutGap="24px" class="app-grid">
+      <ng-container *ngFor="let app of _mApps">
+        <div
+          class="app-card"
+          fxFlex.gt-sm="calc(33% - 24px)"
+          fxFlex.sm="calc(50% - 24px)"
+          fxFlex.xs="100%"
+          [@transitionText]="{ value: _mTriggerAnim, params: { animDelay: 200 } }"
+        >
+          <!-- Image -->
+          <div class="app-card-image" *ngIf="app.image">
+            <img [src]="app.image" [alt]="app.name" />
+          </div>
+
+          <!-- Content -->
+          <div class="app-card-content">
+            <h3 class="app-name">{{ app.name }}</h3>
+            <p class="app-description" *ngIf="app.description">
+              {{ app.description }}
+            </p>
+
+            <div class="tech-stack" *ngIf="app.techStack && app.techStack.length">
+              <span *ngFor="let tech of app.techStack" class="tech-item">{{ tech }}</span>
+            </div>
+
+             
+          </div>
+
+          <!-- ✅ GitHub icon fixed to bottom-right -->
+          <div *ngIf="app.github" class="github-icon">
+            <button (click)="openGitHub(app.github)" mat-icon-button>
+            <img src="assets/svg/icons/github.svg" alt="GitHub" />
+
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
